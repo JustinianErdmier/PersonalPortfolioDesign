@@ -1,0 +1,268 @@
+@use '../utilities' as *;
+
+// TODO: Add box shadow to all buttons.
+
+%button-base {
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $fs-small;
+    font-weight: $fw-regular;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.btn {
+    @extend %button-base;
+    background-color: lighten($gray-300, 3%);
+    border: 1px solid rgba(#000, 0.2);
+    color: $black;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($gray-300, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($black, 50%);
+        text-shadow: -1px -1px 0 darken($gray-300, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($gray-300, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($black, 30%);
+        cursor: not-allowed;
+    }
+}
+
+.btn--primary {
+    @extend %button-base;
+    background-color: lighten($primary, 3%);
+    border: 1px solid darken($primary, 4%);
+    box-shadow: 0 2px 0 darken($primary, 5%), 2px 4px 6px darken($primary, 2%);
+    color: $white;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($primary, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($primary, 50%);
+        text-shadow: -1px -1px 0 darken($primary, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($primary, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($primary, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($primary, 9.5%);
+    }
+
+    &--light {
+        background-color: $white;
+        border: 1px solid lighten($primary, 4%);
+        box-shadow: 0 2px 0 lighten($primary, 5%),
+            2px 4px 6px darken($primary, 2%);
+        color: $primary;
+    }
+
+    &--outline {
+        background-color: unset;
+        border: 1px solid $white;
+        box-shadow: 0 1px 0 lighten($gray-500, 5%),
+            1px 1px 1px darken($gray-500, 2%);
+
+        &:hover {
+            background-color: darken($primary, 1.5%);
+            border: 1px solid $white;
+            color: $white;
+            text-shadow: -1px -1px 0 darken($primary, 9.5%);
+            transition: all 250ms linear;
+        }
+    }
+}
+
+.btn--secondary {
+    @extend %button-base;
+    background-color: lighten($secondary, 3%);
+    border: 1px solid darken($secondary, 4%);
+    box-shadow: 0 2px 0 darken($secondary, 5%),
+        2px 4px 6px darken($secondary, 2%);
+    color: $black;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($secondary, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($secondary, 50%);
+        text-shadow: -1px -1px 0 darken($secondary, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($secondary, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($secondary, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($secondary, 9.5%);
+    }
+}
+
+.btn--tertiary {
+    @extend %button-base;
+    background-color: lighten($light-blue, 3%);
+    border: 1px solid darken($light-blue, 4%);
+    box-shadow: 0 2px 0 darken($gray-700, 5%), 2px 4px 6px darken($gray-700, 2%);
+    color: $white;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($light-blue, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($light-blue, 50%);
+        text-shadow: -1px -1px 0 darken($light-blue, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($light-blue, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($light-blue, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($light-blue, 9.5%);
+    }
+}
+
+.btn--info {
+    @extend %button-base;
+    background-color: lighten($info, 3%);
+    border: 1px solid darken($info, 4%);
+    box-shadow: 0 2px 0 darken($gray-700, 5%), 2px 4px 6px darken($gray-700, 2%);
+    color: $white;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($info, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($info, 50%);
+        text-shadow: -1px -1px 0 darken($info, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($info, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($info, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($info, 9.5%);
+    }
+}
+
+.btn--success {
+    @extend %button-base;
+    background-color: lighten($success, 3%);
+    border: 1px solid darken($success, 4%);
+    box-shadow: 0 2px 0 darken($gray-700, 5%), 2px 4px 6px darken($gray-700, 2%);
+    color: $white;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($success, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($success, 50%);
+        text-shadow: -1px -1px 0 darken($success, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($success, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($success, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($success, 9.5%);
+    }
+}
+
+.btn--warning {
+    @extend %button-base;
+    background-color: lighten($warning, 3%);
+    border: 1px solid darken($warning, 4%);
+    box-shadow: 0 2px 0 darken($gray-700, 5%), 2px 4px 6px darken($gray-700, 2%);
+    color: $white;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($warning, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($warning, 50%);
+        text-shadow: -1px -1px 0 darken($warning, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($warning, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($warning, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($warning, 9.5%);
+    }
+}
+
+.btn--danger {
+    @extend %button-base;
+    background-color: lighten($danger, 3%);
+    border: 1px solid darken($danger, 4%);
+    box-shadow: 0 2px 0 darken($gray-700, 5%), 2px 4px 6px darken($gray-700, 2%);
+    color: $white;
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: darken($danger, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($danger, 50%);
+        text-shadow: -1px -1px 0 darken($danger, 9.5%);
+        transition: all 250ms linear;
+    }
+
+    &:disabled {
+        background-color: darken($danger, 1.5%);
+        border: 1px solid rgba(#000, 0.2);
+        box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+        color: lighten($danger, 30%);
+        cursor: not-allowed;
+        text-shadow: -1px -1px 0 darken($danger, 9.5%);
+    }
+}
+
+.btn--small {
+    font-size: $fs-smaller;
+    font-weight: $fw-medium;
+}
+
+.btn--large {
+    font-size: $fs-medium;
+}

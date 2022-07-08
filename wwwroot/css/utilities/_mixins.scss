@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+@mixin display-flex(
+    $align-items: center,
+    $flex-shrink: 0,
+    $justify-content: center
+) {
+    align-items: $align-items;
+    display: flex;
+    flex-shrink: $flex-shrink;
+    justify-content: $justify-content;
+}
+
+@mixin display-flex-column(
+    $align-items: center,
+    $flex-shrink: 0,
+    $justify-content: center
+) {
+    align-items: $align-items;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: $flex-shrink;
+    justify-content: $justify-content;
+}
+
+@mixin display-grid($gap: 10px, $place-items: center, $place-content: stretch) {
+    gap: $gap;
+    display: grid;
+    grid-template: none;
+    place-items: $place-items;
+    place-content: $place-content;
+}
+
+@mixin page-section(
+    $bg-clr: $gray-500,
+    $bord-radius: 0.5rem,
+    $padding: 15px,
+    $width: 1000px
+) {
+    background-color: $bg-clr;
+    border-radius: $bord-radius;
+    padding: $padding;
+    width: $width;
+}
+
+@mixin content-box(
+    $bg-clr: $background,
+    $bord-radius: 0.5rem,
+    $padding: 5px,
+    $width: 100%
+) {
+    background-color: $bg-clr;
+    border-radius: $bord-radius;
+    padding: $padding;
+    width: $width;
+}

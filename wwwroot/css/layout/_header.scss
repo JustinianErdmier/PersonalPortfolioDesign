@@ -1,0 +1,41 @@
+@use '../utilities' as *;
+
+.header {
+    @include display-flex($justify-content: space-between);
+    color: $white;
+    font-family: $ff-header;
+    font-size: $fs-header;
+    font-weight: $fw-medium;
+    padding: 1.25rem 10rem;
+    position: fixed;
+    top: 0;
+    transition: 150ms ease-in;
+    width: 100%;
+    z-index: 100;
+
+    &--scrolled {
+        background-color: $primary;
+        box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.74);
+        -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.74);
+        -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.74);
+
+        .btn--header {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+
+    &--left {
+        font-weight: $fw-light;
+    }
+
+    &--right {
+        @include display-flex();
+        font-family: $ff-paragraph;
+        gap: 4rem;
+    }
+
+    .btn--header {
+        font-size: $fs-header;
+    }
+}

@@ -1,0 +1,17 @@
+@use '../utilities' as *;
+
+.footer {
+    @include display-flex-column();
+    background: $background;
+    color: $white;
+    font-size: $fs-normal;
+    gap: 1rem;
+    padding: 1rem $site-side-padding;
+    width: 100%;
+
+    .brand {
+        .title {
+            font-size: $fs-medium;
+        }
+    }
+}

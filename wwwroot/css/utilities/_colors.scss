@@ -1,0 +1,48 @@
+$white: #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #ecf0f1 !default;
+$gray-250: #e7e7e7 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #b4bcc2 !default;
+$gray-600: #95a5a6 !default;
+$gray-700: #7b8a8b !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000000 !default;
+
+$blue: #0000ff !default;
+$blue-alt: #008ae6 !default;
+$light-blue: #b3ffff !default;
+$light-blue-alt: #c4e5fa !default;
+$indigo: #6610f2 !default;
+$purple: #400080 !default;
+$pink: #e83e8c !default;
+$red: #ff0000 !default;
+$red-alt: #dc3545 !default;
+$orange: #ffa500 !default;
+$orange-alt: #efb481 !default;
+$yellow: #ffff00 !default;
+$yellow-alt: #ffff80 !default;
+$green: #008000 !default;
+$green-alt: #99ff99 !default;
+$teal: #6fc4cc !default;
+$cyan: #3498db !default;
+$cyan-alt: #17a2b8 !default;
+$brown: #a52a2a !default;
+$brown-alt: #816559 !default;
+$cream: #fff7e6;
+
+$primary: #4275fa !default;
+$secondary: #2e2d56 !default;
+$accent-one: #929292 !default;
+$accent-two: $light-blue !default;
+$background: linear-gradient(
+    126.69deg,
+    #42bafa 6.42%,
+    rgba(17, 2, 198, 0.85) 104.03%
+) !default;
+$info: $cyan !default;
+$success: $green-alt !default;
+$warning: $yellow-alt !default;
+$danger: $red-alt !default;

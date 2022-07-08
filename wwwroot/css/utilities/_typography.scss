@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+// Font Style
+$ff-header: 'Pacifico', cursive !default;
+$ff-paragraph: 'Poppins', sans-serif !default;
+
+// Font Weight
+$fw-light: 300 !default;
+$fw-regular: 400 !default;
+$fw-medium: 500 !default;
+$fw-semi-bold: 600 !default;
+$fw-bold: 700 !default;
+$fw-extra-bold: 800 !default;
+
+// Font Size
+// Formula for calculating em: pixels / 16 = em
+$fs-h1: 3rem !default;
+$fs-h2: 2.5rem !default;
+$fs-h3: 2rem !default;
+$fs-h4: 1.5rem !default;
+$fs-h5: 1rem !default;
+$fs-h6: 0.5rem !default;
+$fs-extra-small: 0.5rem !default;
+$fs-smaller: 0.75rem !default;
+$fs-small: 0.875rem !default;
+$fs-normal: 1rem !default;
+$fs-header: 1.125rem !default;
+$fs-slightly-larger: 1.125rem !default;
+$fs-medium: 1.25rem !default;
+$fs-large: 1.5rem !default;
+$fs-larger: 1.75rem !default;
+$fs-extra-large: 2rem !default;

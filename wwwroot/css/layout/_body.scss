@@ -1,0 +1,127 @@
+@use '../utilities' as *;
+
+.body {
+    @include display-grid();
+    font-family: $ff-paragraph;
+    font-size: $fs-normal;
+    height: 100vh;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+
+        .section {
+            padding: 2.5rem $site-side-padding;
+            width: 100%;
+
+            &--hero {
+                background: $background;
+                color: $white;
+                padding: 0;
+                .hero {
+                    &--wrapper {
+                        @include display-grid($gap: 10rem);
+                        grid-template-columns: 1fr 1fr;
+
+                        padding: 20rem 18rem 30rem 18rem;
+                        position: relative;
+
+                        .message-wrapper {
+                            z-index: 50;
+
+                            .intro {
+                                font-size: $fs-h4;
+                                margin-bottom: -0.75rem;
+                            }
+
+                            .profession {
+                                font-size: $fs-h1;
+                            }
+
+                            .message {
+                                font-size: $fs-slightly-larger;
+                            }
+
+                            .buttons {
+                                @include display-flex($justify-content: start);
+                                gap: 2rem;
+                                margin-top: 1.5rem;
+                            }
+                        }
+
+                        .image {
+                            height: 100%;
+                            position: relative;
+                            width: 100%;
+
+                            .portrait {
+                                position: absolute;
+                                right: 0px;
+                                top: -150px;
+                            }
+                        }
+
+                        .section--wave {
+                            bottom: 0px;
+                            position: absolute;
+                            z-index: 25;
+                        }
+
+                        #blob-one,
+                        #blob-two {
+                            position: absolute;
+                            width: 75rem;
+                            z-index: -1;
+                        }
+
+                        #blob-one {
+                            bottom: -500px;
+                            right: -350px;
+                        }
+
+                        #blob-two {
+                            left: -500px;
+                            top: -500px;
+                        }
+                    }
+                }
+            }
+
+            &--about {
+                background-color: $white;
+                padding-top: 0;
+
+                .about {
+                    &--wrapper {
+                        @include display-grid($gap: 5rem);
+                        align-items: flex-end;
+                        grid-template-columns: 1fr 1fr;
+
+                        .image {
+                            @include display-flex($justify-content: end);
+
+                            #about-me-img {
+                                width: 85%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--skills {
+                height: 750px;
+                background-color: $white;
+            }
+
+            &--projects {
+                height: 850px;
+                background-color: $white;
+            }
+
+            &--contact {
+                height: 750px;
+                background-color: $white;
+            }
+        }
+    }
+}
