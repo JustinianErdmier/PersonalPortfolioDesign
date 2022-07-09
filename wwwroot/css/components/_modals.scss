@@ -1,0 +1,111 @@
+@use '../utilities' as *;
+
+.modal {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 150;
+
+    &--open {
+        display: block;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        background-color: $white;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        margin: 5% auto; /* 5% from the top and centered */
+        padding: 1.5rem;
+        position: fixed;
+        text-align: center;
+        top: 25%;
+        transform: translate(-50%, -50%);
+
+        &--box {
+            @include content-box;
+            margin: 10px auto 10px auto;
+            width: 50%;
+        }
+
+        &--loading-animation {
+            background-color: unset;
+            border: none;
+            border-radius: unset;
+        }
+
+        &--80 {
+            width: 80%;
+        }
+
+        &--60 {
+            width: 60%;
+        }
+
+        &--50 {
+            width: 50%;
+        }
+
+        &--40 {
+            width: 40%;
+        }
+
+        &--30 {
+            width: 30%;
+        }
+
+        &--20 {
+            width: 20%;
+        }
+    }
+
+    &__loader {
+        align-items: center;
+        background-color: $white;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 15% auto; /* 5% from the top and centered */
+        padding: 20px;
+        width: fit-content;
+    }
+
+    &__header {
+        @include display-grid();
+        border-bottom: 0.0625rem solid $gray-500;
+        grid-template-areas: '. title close';
+    }
+
+    &__title {
+        grid-area: title;
+        color: $primary;
+        font-size: $fs-large;
+        font-weight: $fw-semi-bold;
+    }
+
+    &__close-icon {
+        color: $secondary;
+        cursor: pointer;
+        font-size: $fs-medium;
+        grid-area: close;
+        justify-self: end;
+    }
+
+    &__dialog {
+        color: $paragraph;
+        margin-top: 0.5rem;
+        text-align: justify;
+    }
+}
