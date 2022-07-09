@@ -17,13 +17,18 @@
             &--hero {
                 background: $background;
                 color: $white;
-                padding: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                padding-bottom: 20rem;
+                padding-top: 20rem;
+                position: relative;
+                // padding-top: 10rem;
+
                 .hero {
                     &--wrapper {
-                        @include display-grid($gap: 10rem);
+                        @include display-grid($gap: 5rem);
                         grid-template-columns: 1fr 1fr;
-
-                        padding: 20rem 18rem 30rem 18rem;
+                        // padding: 20rem 18rem;
                         position: relative;
 
                         .message-wrapper {
@@ -60,30 +65,31 @@
                                 top: -150px;
                             }
                         }
-
-                        .section--wave {
-                            bottom: 0px;
-                            position: absolute;
-                            z-index: 25;
-                        }
-
-                        #blob-one,
-                        #blob-two {
-                            position: absolute;
-                            width: 75rem;
-                            z-index: -1;
-                        }
-
-                        #blob-one {
-                            bottom: -500px;
-                            right: -350px;
-                        }
-
-                        #blob-two {
-                            left: -500px;
-                            top: -500px;
-                        }
                     }
+                }
+
+                .section--wave {
+                    bottom: 0px;
+                    left: 0px;
+                    position: absolute;
+                    z-index: 25;
+                }
+
+                #blob-one,
+                #blob-two {
+                    position: absolute;
+                    width: 75rem;
+                    z-index: -1;
+                }
+
+                #blob-one {
+                    bottom: -500px;
+                    right: -350px;
+                }
+
+                #blob-two {
+                    left: -500px;
+                    top: -500px;
                 }
             }
 
@@ -93,15 +99,72 @@
 
                 .about {
                     &--wrapper {
-                        @include display-grid($gap: 5rem);
+                        @include display-grid($gap: 0rem);
                         align-items: flex-end;
                         grid-template-columns: 1fr 1fr;
 
                         .image {
-                            @include display-flex($justify-content: end);
+                            @include display-flex();
 
                             #about-me-img {
-                                width: 85%;
+                                width: 100%;
+                            }
+                        }
+
+                        .message-wrapper {
+                            align-self: flex-start;
+
+                            .section {
+                                &__sub-title {
+                                    color: $primary;
+                                    font-size: $fs-section-title;
+                                    font-weight: $fw-medium;
+                                    letter-spacing: 0.16em;
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                &__title {
+                                    color: $secondary;
+                                    font-size: $fs-title;
+                                    font-weight: $fw-semi-bold;
+                                    letter-spacing: 0.16em;
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                &__content {
+                                    color: $paragraph;
+                                    font-size: $fs-slightly-larger;
+                                    margin-bottom: 0.5rem;
+                                }
+                            }
+
+                            .stats {
+                                @include display-flex(
+                                    $justify-content: flex-end
+                                );
+                                gap: 1.5rem;
+                                margin-top: 1.5rem;
+
+                                .stat-box {
+                                    background-color: $card-bg;
+                                    border-radius: 1rem;
+                                    padding: 1.125rem;
+                                    width: 10rem;
+
+                                    @include display-flex-column();
+
+                                    .stat {
+                                        color: $primary;
+                                        font-size: 2rem;
+                                        font-weight: $fw-bold;
+                                    }
+
+                                    .stat-label {
+                                        font-size: 1rem;
+                                        font-weight: $fw-bold;
+                                        text-align: center;
+                                    }
+                                }
                             }
                         }
                     }

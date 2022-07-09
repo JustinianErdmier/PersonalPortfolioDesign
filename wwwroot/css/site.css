@@ -135,22 +135,25 @@ select {
   width: 100%;
 }
 .body__content .section {
-  padding: 2.5rem 18rem;
+  padding: 2.5rem 10rem;
   width: 100%;
 }
 .body__content .section--hero {
   background: linear-gradient(126.69deg, #42bafa 6.42%, rgba(17, 2, 198, 0.85) 104.03%);
   color: #ffffff;
-  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 20rem;
+  padding-top: 20rem;
+  position: relative;
 }
 .body__content .section--hero .hero--wrapper {
-  gap: 10rem;
+  gap: 5rem;
   display: grid;
   grid-template: none;
   place-items: center;
   place-content: stretch;
   grid-template-columns: 1fr 1fr;
-  padding: 20rem 18rem 30rem 18rem;
   position: relative;
 }
 .body__content .section--hero .hero--wrapper .message-wrapper {
@@ -184,22 +187,23 @@ select {
   right: 0px;
   top: -150px;
 }
-.body__content .section--hero .hero--wrapper .section--wave {
+.body__content .section--hero .section--wave {
   bottom: 0px;
+  left: 0px;
   position: absolute;
   z-index: 25;
 }
-.body__content .section--hero .hero--wrapper #blob-one,
-.body__content .section--hero .hero--wrapper #blob-two {
+.body__content .section--hero #blob-one,
+.body__content .section--hero #blob-two {
   position: absolute;
   width: 75rem;
   z-index: -1;
 }
-.body__content .section--hero .hero--wrapper #blob-one {
+.body__content .section--hero #blob-one {
   bottom: -500px;
   right: -350px;
 }
-.body__content .section--hero .hero--wrapper #blob-two {
+.body__content .section--hero #blob-two {
   left: -500px;
   top: -500px;
 }
@@ -208,7 +212,7 @@ select {
   padding-top: 0;
 }
 .body__content .section--about .about--wrapper {
-  gap: 5rem;
+  gap: 0rem;
   display: grid;
   grid-template: none;
   place-items: center;
@@ -220,10 +224,61 @@ select {
   align-items: center;
   display: flex;
   flex-shrink: 0;
-  justify-content: end;
+  justify-content: center;
 }
 .body__content .section--about .about--wrapper .image #about-me-img {
-  width: 85%;
+  width: 100%;
+}
+.body__content .section--about .about--wrapper .message-wrapper {
+  align-self: flex-start;
+}
+.body__content .section--about .about--wrapper .message-wrapper .section__sub-title {
+  color: #4275fa;
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+}
+.body__content .section--about .about--wrapper .message-wrapper .section__title {
+  color: #2e2d56;
+  font-size: 2.125rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+}
+.body__content .section--about .about--wrapper .message-wrapper .section__content {
+  color: #5f5e79;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+.body__content .section--about .about--wrapper .message-wrapper .stats {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.body__content .section--about .about--wrapper .message-wrapper .stats .stat-box {
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  padding: 1.125rem;
+  width: 10rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.body__content .section--about .about--wrapper .message-wrapper .stats .stat-box .stat {
+  color: #4275fa;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.body__content .section--about .about--wrapper .message-wrapper .stats .stat-box .stat-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
 }
 .body__content .section--skills {
   height: 750px;
@@ -248,7 +303,7 @@ select {
   color: #ffffff;
   font-size: 1rem;
   gap: 1rem;
-  padding: 1rem 18rem;
+  padding: 1rem 10rem;
   width: 100%;
 }
 .footer .brand .title {
@@ -264,7 +319,7 @@ select {
   font-family: "Pacifico", cursive;
   font-size: 1.125rem;
   font-weight: 500;
-  padding: 1.25rem 10rem;
+  padding: 1.25rem 5rem;
   position: fixed;
   top: 0;
   transition: 150ms ease-in;
