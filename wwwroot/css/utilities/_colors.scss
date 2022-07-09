@@ -43,6 +43,11 @@ $background: linear-gradient(
     #42bafa 6.42%,
     rgba(17, 2, 198, 0.85) 104.03%
 ) !default;
+$background-alt: linear-gradient(
+    98.94deg,
+    #4275fa -23.73%,
+    rgba(17, 2, 198, 0.87) 118.38%
+) !default;
 $info: $cyan !default;
 $success: $green-alt !default;
 $warning: $yellow-alt !default;

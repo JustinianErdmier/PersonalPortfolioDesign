@@ -3,15 +3,16 @@
 .nav {
     &--socials {
         .nav__items {
-            gap: 1rem;
+            gap: 3rem;
+            justify-content: start;
         }
 
         .nav__item {
             cursor: pointer;
             padding: 1.25rem;
             border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
+            width: 4rem;
+            height: 4rem;
             @include display-flex();
 
             &:hover {
@@ -19,8 +20,14 @@
             }
         }
 
+        .nav__link {
+            @include display-flex();
+            height: 100%;
+            width: 100%;
+        }
+
         .nav__icon {
-            font-size: $fs-medium;
+            font-size: $fs-extra-large;
         }
     }
 

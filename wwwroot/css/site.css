@@ -515,6 +515,126 @@ select {
 .body__content .section--contact {
   background-color: #ffffff;
   margin-bottom: 5rem;
+  padding: 0;
+}
+.body__content .section--contact .contact--wrapper {
+  text-align: center;
+}
+.body__content .section--contact .contact--wrapper .section__sub-title {
+  color: #4275fa;
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+}
+.body__content .section--contact .contact--wrapper .section__title {
+  color: #2e2d56;
+  font-size: 2.125rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper {
+  gap: 3rem;
+  display: grid;
+  grid-template: none;
+  place-items: center;
+  place-content: stretch;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper {
+  background: linear-gradient(98.94deg, #4275fa -23.73%, rgba(17, 2, 198, 0.87) 118.38%);
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 3rem;
+  padding-left: 5rem;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper .sub-section__title {
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper .sub-section__message {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper .contact-information-list .item {
+  font-size: 1rem;
+  font-weight: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper .nav--socials {
+  margin-top: 2rem;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper #blob-one,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper #blob-two {
+  opacity: 0.25;
+  position: absolute;
+  width: 75rem;
+  z-index: -1;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper #blob-one {
+  bottom: -500px;
+  right: -350px;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .left-box--wrapper #blob-two {
+  opacity: 0.35;
+  left: -500px;
+  top: -500px;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper {
+  height: 100%;
+  padding-right: 5rem;
+  width: 100%;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form label,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form input,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form textarea {
+  width: 100%;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form label {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form input,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form textarea {
+  border: none;
+  border-bottom: 0.125rem solid #2e2d56;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form input:focus, .body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form input:focus-visible, .body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form input:focus-within,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form textarea:focus,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form textarea:focus-visible,
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form textarea:focus-within {
+  border-bottom: 0.125rem solid #4275fa;
+  outline-style: none;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form textarea {
+  resize: none;
+}
+.body__content .section--contact .contact--wrapper .bottom--wrapper .form--wrapper form button {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  align-self: flex-end;
 }
 
 .footer {
@@ -543,7 +663,7 @@ select {
   font-family: "Pacifico", cursive;
   font-size: 1.125rem;
   font-weight: 500;
-  padding: 1.25rem 5rem;
+  padding: 1.25rem 10rem;
   position: fixed;
   top: 0;
   transition: 150ms ease-in;
@@ -551,7 +671,7 @@ select {
   z-index: 100;
 }
 .header--scrolled {
-  background-color: #4275fa;
+  background: linear-gradient(98.94deg, #4275fa -23.73%, rgba(17, 2, 198, 0.87) 118.38%);
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.74);
   -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.74);
   -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.74);
@@ -576,14 +696,15 @@ select {
 }
 
 .nav--socials .nav__items {
-  gap: 1rem;
+  gap: 3rem;
+  justify-content: start;
 }
 .nav--socials .nav__item {
   cursor: pointer;
   padding: 1.25rem;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   align-items: center;
   display: flex;
   flex-shrink: 0;
@@ -592,8 +713,16 @@ select {
 .nav--socials .nav__item:hover {
   background-color: #4275fa;
 }
+.nav--socials .nav__link {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 .nav--socials .nav__icon {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 .nav__items {
   align-items: center;

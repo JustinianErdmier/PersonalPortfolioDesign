@@ -444,6 +444,149 @@
             &--contact {
                 background-color: $white;
                 margin-bottom: 5rem;
+                padding: 0;
+
+                .contact {
+                    &--wrapper {
+                        text-align: center;
+
+                        .section {
+                            &__sub-title {
+                                color: $primary;
+                                font-size: $fs-section-title;
+                                font-weight: $fw-medium;
+                                letter-spacing: 0.16em;
+                                margin-bottom: 0.5rem;
+                            }
+
+                            &__title {
+                                color: $secondary;
+                                font-size: $fs-title;
+                                font-weight: $fw-semi-bold;
+                                letter-spacing: 0.16em;
+                                margin-bottom: 0.5rem;
+                            }
+                        }
+
+                        .bottom--wrapper {
+                            @include display-grid($gap: 3rem);
+                            grid-template-columns: 1fr 1fr;
+                            overflow-x: hidden;
+                            overflow-y: hidden;
+                            position: relative;
+                            text-align: left;
+                            width: 100%;
+
+                            .left-box--wrapper {
+                                background: $background-alt;
+                                border-bottom-right-radius: 1rem;
+                                border-top-right-radius: 1rem;
+                                color: $white;
+                                overflow-x: hidden;
+                                overflow-y: hidden;
+                                padding: 3rem;
+                                padding-left: 5rem;
+                                position: relative;
+                                width: 100%;
+                                z-index: 2;
+
+                                .sub-section {
+                                    &__title {
+                                        font-size: $fs-section-title;
+                                        font-weight: $fw-medium;
+                                        margin-bottom: 0.5rem;
+                                    }
+
+                                    &__message {
+                                        font-size: 1.125rem;
+                                        margin-bottom: 1.5rem;
+                                        margin-top: 1.5rem;
+                                    }
+                                }
+
+                                .contact-information-list {
+                                    .item {
+                                        font-size: 1rem;
+                                        font-weight: $fs-medium;
+                                        margin-bottom: 0.75rem;
+                                    }
+                                }
+
+                                .nav--socials {
+                                    margin-top: 2rem;
+                                }
+
+                                #blob-one,
+                                #blob-two {
+                                    opacity: 0.25;
+                                    position: absolute;
+                                    width: 75rem;
+                                    z-index: -1;
+                                }
+
+                                #blob-one {
+                                    bottom: -500px;
+                                    right: -350px;
+                                }
+
+                                #blob-two {
+                                    opacity: 0.35;
+                                    left: -500px;
+                                    top: -500px;
+                                }
+                            }
+
+                            .form--wrapper {
+                                height: 100%;
+                                padding-right: 5rem;
+                                width: 100%;
+
+                                form {
+                                    @include display-flex-column(
+                                        $align-items: start,
+                                        $justify-content: space-evenly
+                                    );
+                                    height: 100%;
+
+                                    label,
+                                    input,
+                                    textarea {
+                                        width: 100%;
+                                    }
+
+                                    label {
+                                        font-size: $fs-medium;
+                                        font-weight: $fw-medium;
+                                    }
+
+                                    input,
+                                    textarea {
+                                        border: none;
+                                        border-bottom: 0.125rem solid $secondary;
+
+                                        &:focus,
+                                        &:focus-visible,
+                                        &:focus-within {
+                                            border-bottom: 0.125rem solid
+                                                $primary;
+                                            outline-style: none;
+                                        }
+                                    }
+
+                                    textarea {
+                                        resize: none;
+                                    }
+
+                                    button {
+                                        margin-top: 0.5rem;
+                                        font-size: $fs-large;
+                                        align-self: flex-end;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
